@@ -139,6 +139,9 @@ input {
   margin-right: 10px;
   height: 30px;
   font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
 }
 
 #bookCart {
@@ -155,7 +158,7 @@ input {
 
 .total {
   display: flex;
-  background-color: #f0f0f0;
+  background-color: #f5eeee;
   justify-content: space-around;
   margin: 10px;
   padding: 2px;
@@ -182,4 +185,30 @@ input {
   background-color: #f0f0f0;
   border: none;
   color: grey;
+}
+
+#price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageTrain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  color: green;
+  height: 5px;
+  width: 15vw;
+  background-color: #459e85;
+  margin: 10% 0px;
+  border-radius: 10px;
+}
+
+#train {
+  height: 50%;
+  width: auto;
 }
