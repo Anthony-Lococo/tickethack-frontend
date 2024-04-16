@@ -33,3 +33,16 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
       //     container2.appendChild(newItem);
     });
 });
+
+for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
+  document.querySelectorAll(".total")[i].addEventListener("click", function () {
+    document.querySelector(
+          ".block2"
+        ).innerHTML += `<div class ="total"><div class="revealSearch">
+            ${value.departure} > ${value.arrival} ${newHour}:${newMinutes}
+          </div><button class="bookCart">Book</button></div>`;
+      }
+  });
+}
+
+// Creation boucle dans querySelector
