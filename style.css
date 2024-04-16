@@ -59,7 +59,6 @@ h3 {
   margin: 100px;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 600px;
   border-radius: 50px;
 }
@@ -89,24 +88,34 @@ h3 {
 }
 
 #inputs {
+  display: flex;
   flex-direction: column;
 }
 
 input {
-  display: flex;
   background-color: rgb(226, 228, 229);
-  border-radius: 50px;
+  border-radius: 5px;
   margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 50px;
+  font-size: 18px;
 }
 
 #searchBtn {
-  display: flex;
   background-color: #459e85;
   color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 200px;
+  height: 50px;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin-top: auto;
+  margin: 400px auto 0; */
 }
 
 #searchBtn:hover {
@@ -115,4 +124,35 @@ input {
 
 .list2 {
   margin-left: 20px;
+}
+
+#search {
+  display: flex;
+  flex-direction: column;
+}
+
+.revealSearch {
+  background-color: rgb(226, 228, 229);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  font-size: 18px;
+}
+
+#bookCart {
+  background-color: #459e85;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  font-size: 18px;
+}
+
+.total {
+  display: flex;
+  background-color: #878383;
 }

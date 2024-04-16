@@ -1,4 +1,4 @@
-document.querySelector("#search").addEventListener("click", function () {
+document.querySelector("#searchBtn").addEventListener("click", function () {
   let departure = document.querySelector("#departure").value;
   let arrival = document.querySelector("#arrival").value;
   let date = document.querySelector("#date").value;
@@ -17,9 +17,11 @@ document.querySelector("#search").addEventListener("click", function () {
           newMinutes = "0" + newMinutes;
         }
 
-        document.querySelector(".block2").innerHTML += `<div>
+        document.querySelector(
+          ".block2"
+        ).innerHTML += `<div class ="total"><div class="revealSearch">
             ${value.departure} > ${value.arrival} ${newHour}:${newMinutes}
-          </div><button>Book</button>`;
+          </div><button id="bookCart">Book</button></div>`;
       }
       //   const container2 = document.querySelector("#block2");
 
