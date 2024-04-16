@@ -19,9 +19,9 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
 
         document.querySelector(
           ".block2"
-        ).innerHTML += `<div class ="total"><div class="revealSearch">
-            ${value.departure} > ${value.arrival} ${newHour}:${newMinutes}
-          </div><button id="bookCart">Book</button></div>`;
+        ).innerHTML += `<div class ="total"><div class="price"><div class="revealSearch">
+            ${value.departure} > ${value.arrival}&nbsp;&nbsp;&nbsp;${newHour}:${newMinutes}&nbsp;&nbsp;&nbsp;<strong>${value.price}€</strong>
+          </div></div><button id="bookCart">Book</button></div>`;
       }
       //   const container2 = document.querySelector("#block2");
 
