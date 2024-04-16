@@ -9,6 +9,18 @@ document.querySelector("#search").addEventListener("click", function () {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+
+      for (const value of data.message) {
+        let newHour = new Date(value.date).getHours();
+        let newMinutes = new Date(value.date).getMinutes();
+        if (newMinutes < 10) {
+          newMinutes = "0" + newMinutes;
+        }
+
+        document.querySelector(".block2").innerHTML += `<div>
+            ${value.departure} > ${value.arrival} ${newHour}:${newMinutes}
+          </div><button>Book</button>`;
+      }
       //   const container2 = document.querySelector("#block2");
 
       //   container2.innerHTML = "";
