@@ -65,6 +65,7 @@ h3 {
 }
 
 .block1 {
+  display: flex;
   height: 200px;
   color: #fff;
   display: flex;
@@ -99,6 +100,7 @@ input {
 }
 
 .block1 button {
+  display: flex;
   background-color: #459e85;
   color: #fff;
   border: none;
