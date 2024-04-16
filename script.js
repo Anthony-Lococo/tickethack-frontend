@@ -23,26 +23,20 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
             ${value.departure} > ${value.arrival} ${newHour}:${newMinutes}
           </div><button id="bookCart">Book</button></div>`;
       }
-      //   const container2 = document.querySelector("#block2");
-
-      //   container2.innerHTML = "";
-
-      //   for (const item of data) {
-      //     const newItem = document.createElement("div");
-      //     newItem.textContent = item;
-      //     container2.appendChild(newItem);
     });
 });
 
 for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
   document.querySelectorAll(".total")[i].addEventListener("click", function () {
-    document.querySelector(
-          ".block2"
-        ).innerHTML += `<div class ="total"><div class="revealSearch">
-            ${value.departure} > ${value.arrival} ${newHour}:${newMinutes}
-          </div><button class="bookCart">Book</button></div>`;
+    fetch(
+      "http://localhost:3000/trajets/search?departure=${departure}&arrival=${arrival}&date=${date}`",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       }
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   });
 }
-
-// Creation boucle dans querySelector
