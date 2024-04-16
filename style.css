@@ -64,12 +64,19 @@ h3 {
   border-radius: 50px;
 }
 
-.block {
+.block1 {
   height: 200px;
   color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.block2 {
+  height: 200px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 #content {
@@ -78,4 +85,28 @@ h3 {
 
 .list {
   color: black;
+}
+
+#inputs {
+  flex-direction: column;
+}
+
+input {
+  display: flex;
+  background-color: rgb(226, 228, 229);
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.block1 button {
+  background-color: #459e85;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block1 button:hover {
+  background-color: #2e6b5f;
 }
