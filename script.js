@@ -22,21 +22,22 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
         ).innerHTML += `<div class ="total"><div class="price"><div class="revealSearch">
             ${value.departure} > ${value.arrival}&nbsp;&nbsp;&nbsp;${newHour}:${newMinutes}&nbsp;&nbsp;&nbsp;<strong>${value.price}€</strong>
           </div></div><button id="bookCart">Book</button></div>`;
+        for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
+          let newTravel = {
+            id: value._id,
+          };
+          document
+            .querySelectorAll(".total")
+            [i].addEventListener("click", function () {
+              fetch("http://localhost:3000/cart", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newTravel),
+              })
+                .then((response) => response.json())
+                .then((data) => console.log(data));
+            });
+        }
       }
     });
 });
-
-for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
-  document.querySelectorAll(".total")[i].addEventListener("click", function () {
-    fetch(
-      "http://localhost:3000/trajets/search?departure=${departure}&arrival=${arrival}&date=${date}`",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  });
-}
