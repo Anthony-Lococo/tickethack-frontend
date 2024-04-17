@@ -45,13 +45,3 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
       }
     });
 });
-
-for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
-  document.querySelectorAll(".total")[i].addEventListener("click", function () {
-    fetch(
-      `http://localhost:3000/trajets/search?departure=${departure}&arrival=${arrival}&date=${date}`
-    )
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  });
-}
