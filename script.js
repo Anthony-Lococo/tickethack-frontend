@@ -12,7 +12,7 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
         document.querySelector("#train").src = "./assets/images/notfound.png";
         document.querySelector("#text").textContent = "No trip found";
       } else {
-        document.querySelector("imageTrain").style.display = "none";
+        document.querySelector(".imageTrain").style.display = "none";
         for (const value of data.message) {
           let newHour = new Date(value.date).getHours();
           let newMinutes = new Date(value.date).getMinutes();
