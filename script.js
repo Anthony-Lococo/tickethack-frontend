@@ -4,7 +4,7 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
   let date = document.querySelector("#date").value;
 
   fetch(
-    `http://localhost:3000/trajets/search?departure=${departure}&arrival=${arrival}&date=${date}`
+    `https://tickethack-backend-three-orcin.vercel.app/trajets/search?departure=${departure}&arrival=${arrival}&date=${date}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -35,11 +35,14 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
             document
               .querySelectorAll(".bookCart")
               [i].addEventListener("click", function () {
-                fetch("http://localhost:3000/cart", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify(newTravel),
-                })
+                fetch(
+                  "https://tickethack-backend-three-orcin.vercel.app/cart",
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(newTravel),
+                  }
+                )
                   .then((response) => response.json())
                   .then((data) => {
                     console.log("this is", data);

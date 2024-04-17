@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/booked/results")
+fetch("https://tickethack-backend-three-orcin.vercel.app/booked/results")
   .then((response) => response.json())
   .then((data) => {
     for (const value of data.message) {

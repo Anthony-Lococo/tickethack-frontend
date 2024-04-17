@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/cart/select")
+fetch("https://tickethack-backend-three-orcin.vercel.app/cart/select")
   .then((response) => response.json())
   .then((data) => {
     let sum = 0;
@@ -23,9 +23,12 @@ fetch("http://localhost:3000/cart/select")
         document
           .querySelectorAll(".delete")
           [i].addEventListener("click", function () {
-            fetch(`http://localhost:3000/cart/delete?id=${trip._id}`, {
-              method: "DELETE",
-            })
+            fetch(
+              `https://tickethack-backend-three-orcin.vercel.app/cart/delete?id=${trip._id}`,
+              {
+                method: "DELETE",
+              }
+            )
               .then((response) => response.json())
               .then((data) =>
                 console.log(data)(
@@ -43,7 +46,7 @@ fetch("http://localhost:3000/cart/select")
         for (const trip of data.message) {
           let purchase = { travel: trip.travel._id };
           console.log(trip.travel._id);
-          fetch("http://localhost:3000/booked", {
+          fetch("https://tickethack-backend-three-orcin.vercel.app/booked", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(purchase),
@@ -51,9 +54,12 @@ fetch("http://localhost:3000/cart/select")
             .then((response) => response.json())
             .then((data) => console.log(data));
         }
-        fetch("http://localhost:3000/cart/deletemany", {
-          method: "DELETE",
-        })
+        fetch(
+          "https://tickethack-backend-three-orcin.vercel.app/cart/deletemany",
+          {
+            method: "DELETE",
+          }
+        )
           .then((response) => response.json())
           .then((data) => window.location.assign("bookings.html"));
       });
