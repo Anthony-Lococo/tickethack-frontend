@@ -1,0 +1,54 @@
+body {
+  background-color: #eff2f1;
+  font-weight: 600;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contentCart {
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.insert {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.allTrajets {
+  background-color: #f5eeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  width: 80%;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.separator {
+  background-color: black;
+  height: 1px;
+  width: 80%;
+  margin: 25px;
+}
+
+.greenText {
+  color: #3e927d;
+}

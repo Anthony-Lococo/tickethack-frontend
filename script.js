@@ -8,11 +8,14 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       if (data.result === false) {
         document.querySelector("#train").src = "./assets/images/notfound.png";
         document.querySelector("#text").textContent = "No trip found";
+        document.querySelector(".imageTrain").style.display = "flex";
       } else {
         document.querySelector(".imageTrain").style.display = "none";
+
         for (const value of data.message) {
           let newHour = new Date(value.date).getHours();
           let newMinutes = new Date(value.date).getMinutes();
@@ -24,13 +27,13 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
             ".block2"
           ).innerHTML += `<div class ="total"><div class="price"><div class="revealSearch">
             ${value.departure} > ${value.arrival}&nbsp;&nbsp;&nbsp;${newHour}:${newMinutes}&nbsp;&nbsp;&nbsp;<strong>${value.price}€</strong>
-          </div></div><button id="bookCart">Book</button></div>`;
+          </div></div><button class="bookCart">Book</button></div>`;
           for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
             let newTravel = {
               id: value._id,
             };
             document
-              .querySelectorAll(".total")
+              .querySelectorAll(".bookCart")
               [i].addEventListener("click", function () {
                 fetch("http://localhost:3000/cart", {
                   method: "POST",
