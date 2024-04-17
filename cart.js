@@ -27,10 +27,11 @@ fetch("http://localhost:3000/cart/select")
               method: "DELETE",
             })
               .then((response) => response.json())
-              .then(
-                (data) =>
+              .then((data) =>
+                console.log(data)(
                   (document.getElementById(`${trip._id}`).style.display =
                     "none")
+                )
               );
           });
       }

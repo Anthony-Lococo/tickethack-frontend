@@ -27,7 +27,7 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
             ".block2"
           ).innerHTML += `<div class ="total"><div class="price"><div class="revealSearch">
             ${value.departure} > ${value.arrival}&nbsp;&nbsp;&nbsp;${newHour}:${newMinutes}&nbsp;&nbsp;&nbsp;<strong>${value.price}€</strong>
-          </div></div><button class="bookCart">Book</button></div>`;
+          </div></div><a href="./cart.html"><button class="bookCart">Book</button></a></div>`;
           for (let i = 0; i < document.querySelectorAll(".total").length; i++) {
             let newTravel = {
               id: value._id,
@@ -41,7 +41,10 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
                   body: JSON.stringify(newTravel),
                 })
                   .then((response) => response.json())
-                  .then((data) => window.location.assign("cart.html"));
+                  .then((data) => {
+                    console.log("this is", data);
+                    window.location.assign("cart.html");
+                  });
               });
           }
         }
