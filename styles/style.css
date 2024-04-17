@@ -55,12 +55,12 @@ h3 {
 .container {
   display: flex;
   background-color: #fff;
-  width: 50%;
-  margin: 100px;
+  width: 20%;
   flex-direction: column;
   justify-content: center;
-  height: 600px;
-  border-radius: 50px;
+  height: auto;
+  border-radius: 10px;
+  padding: 30px 15px;
 }
 
 /* .block1 {
@@ -72,15 +72,17 @@ h3 {
 } */
 
 .block2 {
-  height: 200px;
+  height: 350px;
   color: #060505;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 #content {
   display: flex;
+  justify-content: center;
+  gap: 10%;
 }
 
 .list {
@@ -93,7 +95,6 @@ h3 {
 }
 
 input {
-  background-color: rgb(226, 228, 229);
   border-radius: 5px;
   margin-top: 10px;
   margin-left: 10px;
@@ -109,7 +110,7 @@ input {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 200px;
+  margin-top: 100px;
   height: 50px;
   font-size: 18px;
   margin-left: 10px;
@@ -132,27 +133,82 @@ input {
 }
 
 .revealSearch {
-  background-color: rgb(226, 228, 229);
   border-radius: 5px;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   height: 30px;
   font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
 }
 
 #bookCart {
   background-color: #459e85;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
+  margin: 3px;
   border-radius: 5px;
   cursor: pointer;
-  height: 50px;
-  font-size: 18px;
+  width: auto;
+  font-size: 16px;
 }
 
 .total {
   display: flex;
-  background-color: #878383;
+  background-color: #f5eeee;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+#departure {
+  padding-left: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-bottom: solid grey 1.5px;
+  margin-bottom: -10px;
+}
+
+#arrival {
+  padding-left: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  margin-bottom: 40px;
+}
+
+#date {
+  padding-left: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  color: grey;
+}
+
+#price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageTrain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  color: green;
+  height: 5px;
+  width: 15vw;
+  background-color: #459e85;
+  margin: 10% 0px;
+  border-radius: 10px;
+}
+
+#train {
+  height: 50%;
+  width: auto;
 }
