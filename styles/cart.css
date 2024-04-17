@@ -34,13 +34,16 @@ h1 {
 }
 
 #containerCart {
-  display: flex;
   height: 300px;
-  width: 1200px;
+  width: 70%;
   background-color: #fff;
-  border-radius: 24px;
+  border-radius: 30px 30px 0px 0px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid black 1px;
 }
 
 #CC {
@@ -48,22 +51,55 @@ h1 {
   height: 100vh;
   align-items: center;
   justify-content: center;
-}
-
-h3 {
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 #totalCart {
+  display: flex;
   background-color: #00153e;
   height: 60px;
-  margin-top: 205px;
-  width: 100%;
+  width: 70%;
   border-radius: 0px 0px 30px 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
 }
 
 h4 {
   color: #eee;
+}
+
+#purchaseBtn {
+  background-color: #459e85;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 16%;
+  height: 50px;
+}
+
+/* Trip barre */
+
+#ajout {
+  width: 100%;
+  padding: 30px;
+  overflow: auto;
+}
+
+.trip {
+  background-color: #f5eeee;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.trip .delete {
+  background-color: #459e85;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
 }

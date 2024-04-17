@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Carts</title>
+    <link rel="stylesheet" href="./styles/cart.css" />
   </head>
   <body>
-    <scrip src="./cart.js"></scrip>
+    <header>
+      <h1>Tickethat</h1>
+      <nav>
+        <ul id="nav">
+          <li class="list1"><a href="#">Cart</a></li>
+          <li class="list2"><a href="#">Bookings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="CC">
+      <div id="containerCart">
+        <h3>My Cart</h3>
+        <div id="ajout"></div>
+      </div>
+      <div id="totalCart">
+        <h4 class="total">Total :</h4>
+        <button id="purchaseBtn" type="button">Purchase</button>
+      </div>
+    </div>
+
+    <script src="./cart.js"></script>
   </body>
 </html>
