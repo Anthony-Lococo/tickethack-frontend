@@ -41,7 +41,7 @@ document.querySelector("#searchBtn").addEventListener("click", function () {
                   body: JSON.stringify(newTravel),
                 })
                   .then((response) => response.json())
-                  .then((data) => console.log(data));
+                  .then((data) => window.location.assign("cart.html"));
               });
           }
         }
