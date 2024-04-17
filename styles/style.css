@@ -142,7 +142,7 @@ input {
   align-items: space-around;
 }
 
-#bookCart {
+.bookCart {
   background-color: #459e85;
   color: #fff;
   border: none;
